@@ -148,11 +148,10 @@ void SessionItem::onDetached(Device* device){
     for (auto dev: m_devices) {
          if (!dev->m_device->m_serial.compare(device->m_serial)) {
                 m_devices.removeOne(dev);
+                devicesChanged();
                 delete dev;
          }
     }
-
-    devicesChanged();
 }
 
 void SessionItem::onSampleCountChanged(){
