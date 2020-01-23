@@ -8,6 +8,12 @@
 
 #include "utils/backtracing.h"
 #include "utils/fileio.h"
+#include "config.h"
+
+#include <iostream>
+#include <string>
+using namespace std;
+
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +23,7 @@ int main(int argc, char *argv[])
 
     QLocale::setDefault(QLocale(QLocale::English, QLocale::UnitedStates));
 
-    init_signal_handlers(argv[0]);
+//    init_signal_handlers(argv[0]);
 
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
@@ -40,7 +46,7 @@ int main(int argc, char *argv[])
         }
         engine.load(argv[1]);
     } else {
-        engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+	    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
     }
 
 

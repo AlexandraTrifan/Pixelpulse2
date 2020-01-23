@@ -7,19 +7,19 @@ CONFIG += c++11
 CONFIG(release, debug|release):DEFINES += QT_NO_DEBUG_OUTPUT
 
 isEmpty(LIBUSB_LIBRARY) {
-   LIBUSB_LIBRARY = "C:\libusb\MinGW32\static\libusb-1.0.a"
+	error("Can't find libusb, please provide LIBUSB_LIBRARY")
 }
 
  isEmpty(LIBUSB_INCLUDE_PATH) {
-   LIBUSB_INCLUDE_PATH = "C:\libusb\include\libusb-1.0"
+   error("Can't find libusb include, please provide LIBUSB_INCLUDE_PATH")
 }
 
 isEmpty(LIBSMU_LIBRARY) {
-   LIBSMU_LIBRARY = "C:/Workspace/libsmu/build-libsmu-Desktop_Qt_5_4_2_MinGW_32bit3-Release/src/libsmu.dll.a"
+   error("Can't find libsmu, please provide LIBSMU_LIBRARY")
 }
 
  isEmpty(LIBSMU_INCLUDE_PATH) {
-   LIBSMU_INCLUDE_PATH = "C:\Workspace\libsmu\libsmu\include"
+   error("Can't find libsmu include, please provide LIBSMU_INCLUDE_PATH")
 }
 
 QMAKE_CFLAGS_DEBUG += -ggdb
