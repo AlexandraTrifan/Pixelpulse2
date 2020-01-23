@@ -154,3 +154,11 @@ target_link_libraries(${PROJECT_NAME} LINK_PRIVATE
 		${Qt5Qml_LIBRARIES}
 		${Qt5Network_LIBRARIES}
 )
+
+
+if (NOT WIN32)
+	find_library(PTHREAD_LIBRARIES pthread)
+	if (PTHREAD_LIBRARIES)
+		target_link_libraries(${PROJECT_NAME} LINK_PRIVATE ${PTHREAD_LIBRARIES})
+	endif()
+endif()
