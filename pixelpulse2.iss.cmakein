@@ -1,5 +1,5 @@
 #define AppName "Pixelpulse2"
-#define AppVersion "1.0.4"
+#define AppVersion "@GIT_VERSION@"
 #define AppPublisher "Analog Devices, Inc."
 #define AppURL "http://www.analog.com"
 #define AppExeName "Pixelpulse2.exe"
@@ -53,7 +53,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: drivers; Description: Install WinUSB drivers for the M1K;
 
 [Files]
-Source: "c:\projects\pixelpulse2\release\pixelpulse2.exe"; DestDir: "{app}"
+Source: "c:\projects\pixelpulse2\pixelpulse_32\*"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "c:\projects\pixelpulse2\pixelpulse_64\*"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "c:\projects\pixelpulse2\distrib\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs
 Source: "C:\WinDDK\7600.16385.1\redist\DIFx\dpinst\EngMui\x86\dpinst.exe"; DestDir: "{app}\drivers"; Tasks: drivers; Check: not IsWin64
 Source: "C:\WinDDK\7600.16385.1\redist\DIFx\dpinst\EngMui\amd64\dpinst.exe"; DestDir: "{app}\drivers"; Tasks: drivers; Check: IsWin64

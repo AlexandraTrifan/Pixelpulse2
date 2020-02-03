@@ -55,6 +55,7 @@ find_package(Qt5Network REQUIRED)
 string(TIMESTAMP BUILD_DATE "%Y/%m/%d")
 set(GIT_VERSION ${PP_GIT_REV})
 configure_file(config.h.cmakein ${CMAKE_BINARY_DIR}/config.h @ONLY)
+configure_file(pixelpulse2.iss.cmakein ${CMAKE_CURRENT_BINARY_DIR}/pixelpulse2.iss @ONLY)
 
 # use pkg-config for everything that's not Windows
 if(NOT WIN32)
