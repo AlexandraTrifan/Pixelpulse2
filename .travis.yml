@@ -87,12 +87,11 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: gjhjymTOZHb+J6h4wPkZBjgP2wYGhhRBiLGadKfiq8mherF+XRTZyVHMeRmBaJI963OkrIMP9lt2H131Iv5dsHXmxokosxQ2xO/gJA2ft4P23vpjC4KNhdOI65G0agr+cixSfANOQPswCETu/L5k5Q79RN+VnilUaYka2UiGqK8= 
+    secure: B/wq6NUWR0mZKHJuhfIvNDvBa+8DKmyNXPbzFsYdzOf/PDoATJmYO9QT/a6U5JRMbG6awP1IQH7gyrDtXCALoFtbBUkTN0M5+WrLwcjbI0APrSliVB4JuPbBalXa/wMY+on/0qrxt0CH4+INKkvWMkxeeXLPSOqvVtXmc8Y7y3OFSrwTMVDTV9maXMgma5O10MFvCHsODMIO8Z4k1BCgrwXoOcJPMoE7gZnVZxbSsKwtRKNUOvndSOrNEkXGxO1JXxAXcGE6SuDtkXkDyWDIKMnzw5cMLTSQcVvDGgmerZxvVRtpKf6HXtRMPJvfI43HYwSvNd9i/a7GdfuoRS1VYHo6HILIHEJArlStVPW5PNdJ2dMZc8xxBQYrd5NrKWzElC5o9VbJPdPPFFvsF+LiTfD9wy09x1HKeF1U0Nv6QocogqdK0Irwz+cJzKi185HuTdGhFILzka8ntpM1V8RSFTszRZm64PRf5RzgF0KHNk6ObBaEVo98xEaJv5aQCSxTW6LXANfPzIUdSr+5eWcuSbZ6LndF+EPyPUvpceE31e8fG5ECVA/r0GUvIrZH2/xV0TniNDiHmKI8MyLU7dkwLkuoitH3XZJGgUpkvlTkL0njnuUr+et66WhbFznFBHQ6tmNepZXZFaER5Mlkwe0NTf2wejMzagPMk5H0AVAeI/Y=
   file_glob: true
   file: "build/*.dmg"
   skip_cleanup: true
   on:
     condition: "${TRAVIS_OS_NAME} == osx"
-    repo: analogdevicesinc/Pixelpulse2
+    repo: AlexandraTrifan/Pixelpulse2
     tags: true
-
